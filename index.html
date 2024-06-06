@@ -8,16 +8,37 @@
   <title>Picture This!</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <header class="header">
     <div class="title">
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
-
+    <picture>
+      <source srcset="
+              images/museum_320.jpg 320w,
+              images/museum_480.jpg 480w,
+              images/museum_640.jpg 640w,
+              images/museum_720.jpg 720w,
+              images/museum_960.jpg 960w, 
+              images/museum_1440.jpg 1440w,
+              images/museum_1920.jpg 1920w,
+              images/museum_2160.jpg 2160w, 
+              images/museum_2880.jpg 2880w"
+              media="(max-width: 960px)">
+      <source srcset="
+              images/museum_sq_480.jpg 480w,
+              images/museum_sq_640.jpg 640w,
+              images/museum_sq_800.jpg 800w,
+              images/museum_sq_960.jpg 960w, 
+              images/museum_sq_1280.jpg 1280w,
+              images/museum_sq_1440.jpg 1440w,
+              images/museum_sq_1600.jpg 1600w, 
+              images/museum_sq_1920.jpg 1920w,
+              images/museum_sq_2400.jpg 2400w"
+      media="(min-width: 960px)">
+    <img src="images/museum.jpg" alt="Imageofamuseum">
+    </picture>
   </header>
 </body>
-
 </html>
